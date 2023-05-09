@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}bloghome{% endblock title %}
 {% block body %}
-This is my blogpost page
+<div class="container">
+<h1 class="text-center" >Welcome to Our Blogs</h1>
+{% for blog in blogs %}
+<div class="callout my-3"> <a  class="text-dark" href="/blogpost/{{blog.slug}}"> <h2 class="my-5" >{{blog.title}}</h2> </a>
+<button type="button" class="btn btn-primary mx-3">Read More...</button></div>
+<br>
+{% endfor %}
+</div>
 {% endblock body %}
