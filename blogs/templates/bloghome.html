@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
-{% block title %}bloghome{% endblock title %}
+{% block title %}blogpost{% endblock title %}
 {% block body %}
-This is my bloghome page
+<div class="container">
+    <h1 class="text-center mt-3" >{{blogs.title}}</h1>
+    <div class="row">{{blogs.content}}</div>
+    
+</div>
 {% endblock body %}
